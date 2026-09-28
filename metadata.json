@@ -1,0 +1,6 @@
+{
+  "name": "Glow & Grace | Luxury Cosmetics & Beauty",
+  "description": "Discover premium, clean beauty and cosmetics made to make you feel confident, radiant, and beautiful. Shop skincare, makeup, fragrances, and lip care.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
