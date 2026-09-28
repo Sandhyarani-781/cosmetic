@@ -9,7 +9,8 @@ import {
   X, 
   ShieldCheck, 
   Sparkles,
-  ChevronDown
+  ChevronDown,
+  MessageCircle
 } from 'lucide-react';
 import { ViewType } from '../types';
 
@@ -140,6 +141,17 @@ export const Navbar: React.FC = () => {
               )}
             </button>
 
+            {/* AI Beauty Concierge (n8n Chatbot) */}
+            <button
+              onClick={() => window.dispatchEvent(new CustomEvent('open-beauty-chat'))}
+              aria-label="Open AI Beauty Concierge"
+              title="Chat with AI Beauty Concierge"
+              className="relative p-2.5 text-[#871F2E] bg-[#FAF2EF] hover:bg-[#F0DCD5] rounded-full transition-colors flex items-center justify-center"
+            >
+              <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#871F2E]" />
+              <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-500 rounded-full border-2 border-white"></span>
+            </button>
+
             {/* Profile / Auth Dropdown */}
             <div className="relative">
               <button
@@ -254,6 +266,16 @@ export const Navbar: React.FC = () => {
             >
               <ShieldCheck className="w-4 h-4 text-[#C5A880]" />
               Admin Portal
+            </button>
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                window.dispatchEvent(new CustomEvent('open-beauty-chat'));
+              }}
+              className="text-left py-2.5 px-3 rounded-lg text-sm font-medium flex items-center gap-2 bg-[#FAF2EF] text-[#871F2E] border border-[#ECD9D3]"
+            >
+              <Sparkles className="w-4 h-4 text-[#C2847A]" />
+              AI Beauty Concierge (Chat)
             </button>
           </nav>
           

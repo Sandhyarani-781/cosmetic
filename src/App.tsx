@@ -12,6 +12,7 @@ import { SearchModal } from './components/SearchModal';
 import { CartDrawer } from './components/CartDrawer';
 import { AuthModal } from './components/AuthModal';
 import { ProductDetailModal } from './components/ProductDetailModal';
+import { N8nChatbot } from './components/N8nChatbot';
 
 // Views
 import { HomeView } from './views/HomeView';
@@ -74,6 +75,7 @@ const AppContent: React.FC = () => {
       <AuthModal />
       <ProductDetailModal />
       <ToastContainer />
+      <N8nChatbot />
     </div>
   );
 };

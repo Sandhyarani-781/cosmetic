@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useShop } from '../context/ShopContext';
-import { Mail, Phone, MapPin, Send, CheckCircle2, ChevronDown, Sparkles } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle2, ChevronDown, Sparkles, MessageCircle } from 'lucide-react';
 
 export const ContactView: React.FC = () => {
   const { showToast } = useShop();
@@ -186,6 +186,28 @@ export const ContactView: React.FC = () => {
                   <p className="text-[11px] text-[#A09395]">Monday – Friday: 9am – 6pm EST</p>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Live AI Concierge Card */}
+          <div className="bg-gradient-to-br from-[#2D2426] to-[#4A393C] text-white p-6 sm:p-7 rounded-3xl shadow-md relative overflow-hidden">
+            <div className="relative z-10 space-y-3">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-white text-[11px] font-medium border border-white/15">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>n8n AI Concierge Live</span>
+              </div>
+              <h3 className="font-serif text-xl sm:text-2xl text-[#FAF7F5]">Need Instant Advice?</h3>
+              <p className="text-xs text-[#E8D6D2] leading-relaxed">
+                Connect with our automated AI Beauty Concierge powered by your n8n workflow for instant shade analysis, skin routine planning, and ingredient lookups.
+              </p>
+              <button
+                type="button"
+                onClick={() => window.dispatchEvent(new CustomEvent('open-beauty-chat'))}
+                className="mt-2 w-full py-2.5 bg-gradient-to-r from-[#C2847A] to-[#E5B5AC] hover:opacity-95 text-[#2D2426] rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition cursor-pointer shadow-sm"
+              >
+                <MessageCircle className="w-4 h-4" />
+                <span>Launch AI Beauty Chat</span>
+              </button>
             </div>
           </div>
 
